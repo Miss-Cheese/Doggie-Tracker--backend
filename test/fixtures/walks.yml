@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dog_id: 1
+  date: 2020-02-20
+  start_time: 2020-02-20 10:44:13
+  finish_time: 2020-02-20 10:44:13
+  pee_time: 2020-02-20 10:44:13
+  poop_time: 2020-02-20 10:44:13
+
+two:
+  dog_id: 1
+  date: 2020-02-20
+  start_time: 2020-02-20 10:44:13
+  finish_time: 2020-02-20 10:44:13
+  pee_time: 2020-02-20 10:44:13
+  poop_time: 2020-02-20 10:44:13
