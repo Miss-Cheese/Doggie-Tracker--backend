@@ -8,7 +8,7 @@
 
 User.destroy_all
 Dog.destroy_all
-Weight.destroy.all
+Weight.destroy_all
 
 user1 = User.create(name: "Natalie", email: "nat.galligan@gmail.com", password: "123")
 

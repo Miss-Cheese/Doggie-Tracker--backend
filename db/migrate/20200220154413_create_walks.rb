@@ -5,8 +5,8 @@ class CreateWalks < ActiveRecord::Migration[6.0]
       t.date :date
       t.time :start_time
       t.time :finish_time
-      t.time :pee_time
-      t.time :poop_time
+      t.integer :pee
+      t.integer :poop
 
       t.timestamps
     end
