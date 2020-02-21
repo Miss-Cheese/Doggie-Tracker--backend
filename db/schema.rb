@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2020_02_20_154413) do
 
   create_table "meals", force: :cascade do |t|
     t.integer "dog_id"
-    t.string "type"
+    t.string "food"
+    t.string "meal_type"
     t.date "date"
     t.time "time"
     t.datetime "created_at", precision: 6, null: false
@@ -44,8 +45,8 @@ ActiveRecord::Schema.define(version: 2020_02_20_154413) do
     t.date "date"
     t.time "start_time"
     t.time "finish_time"
-    t.time "pee_time"
-    t.time "poop_time"
+    t.integer "pee"
+    t.integer "poop"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

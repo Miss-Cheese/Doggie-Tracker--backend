@@ -12,7 +12,7 @@ class WalksController < ApplicationController
 
     private
     def walk_params
-        params.require(:walk).permit(:dog_id, :start_time, :finish_time, :pee_time, :poop_time)
+        params.require(:walk).permit(:dog_id, :start_time, :finish_time, :pee, :poop)
     end
 
 end
