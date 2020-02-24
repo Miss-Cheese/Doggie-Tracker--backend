@@ -26,8 +26,7 @@ ActiveRecord::Schema.define(version: 2020_02_20_154413) do
     t.integer "dog_id"
     t.string "food"
     t.string "meal_type"
-    t.date "date"
-    t.time "time"
+    t.datetime "datetime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,9 +41,8 @@ ActiveRecord::Schema.define(version: 2020_02_20_154413) do
 
   create_table "walks", force: :cascade do |t|
     t.integer "dog_id"
-    t.date "date"
-    t.time "start_time"
-    t.time "finish_time"
+    t.datetime "start_time"
+    t.datetime "finish_time"
     t.integer "pee"
     t.integer "poop"
     t.datetime "created_at", precision: 6, null: false
@@ -54,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_02_20_154413) do
   create_table "weights", force: :cascade do |t|
     t.integer "dog_id"
     t.integer "amount"
-    t.date "date"
+    t.datetime "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

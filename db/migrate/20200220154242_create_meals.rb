@@ -4,8 +4,7 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.integer :dog_id
       t.string :food
       t.string :meal_type
-      t.date :date
-      t.time :time
+      t.datetime :datetime
 
       t.timestamps
     end
