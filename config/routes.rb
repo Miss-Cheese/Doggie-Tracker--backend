@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :meals, only: [:index, :create]
   resources :weights, only: [:index, :create]
   resources :dogs, only: [:index, :create]
-  resources :users, only: [:index, :create]
+  resources :users
 end

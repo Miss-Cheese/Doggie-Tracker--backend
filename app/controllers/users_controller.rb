@@ -5,9 +5,24 @@ class UsersController < ApplicationController
         render json: users, status: :ok
     end
 
+    def show
+        user = User.find(params[:id])
+        render json: user
+    end
+
     def create
         user = User.create!(user_params)
-        render json: note, status: :ok
+        render json: user, status: :ok
+    end
+
+    def update
+        user = User.find(params[:id])
+        user.update(user_params)
+    end
+
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
     end
 
     private
