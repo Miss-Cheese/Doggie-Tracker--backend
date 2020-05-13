@@ -11,8 +11,18 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create!(user_params)
-        render json: user, status: :ok
+        user = User.new(
+            email: params[:email],
+            name: params[:name],
+            password: params[:password]
+        )
+        if user.save
+            token = JWT.encode({user_id: user.id}, ENV["secret_key"])
+            render json: {user: user, token: token}
+        else
+            render json: {errors: user.errors.full_messages}
+            # render json: { errors: "Something went wrong, please try again." }, status: :not_acceptable
+        end
     end
 
     def update
@@ -25,9 +35,11 @@ class UsersController < ApplicationController
         user.destroy
     end
 
-    private
-    def user_params
-        params.require(:user).permit(:name, :email, :password)
-    end
+    # private
+    # def user_params
+    #     params.require(:user).permit(:name, :email, :password)
+    # end
     
 end
+
+
