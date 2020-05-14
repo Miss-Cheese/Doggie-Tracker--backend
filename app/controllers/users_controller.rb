@@ -21,7 +21,6 @@ class UsersController < ApplicationController
             render json: {user: user, token: token}
         else
             render json: {errors: user.errors.full_messages}
-            # render json: { errors: "Something went wrong, please try again." }, status: :not_acceptable
         end
     end
 
