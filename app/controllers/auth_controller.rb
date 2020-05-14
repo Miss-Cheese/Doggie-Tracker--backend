@@ -1,7 +1,6 @@
 class AuthController < ApplicationController
 
     def login
-        # byebug
         user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
             token = JWT.encode({user_id: user.id}, ENV["secret_key"])
@@ -13,9 +12,9 @@ class AuthController < ApplicationController
 
     def auto_login
         if session_user
-            render json: session_user
+            render json: {user: session_user}
         else
-            render json: {errors: user.errors.full_messages}
+            render json: {errors: session_user.errors.full_messages}
         end
     end
 
